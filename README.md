@@ -1,6 +1,12 @@
-# Pagination Angular
+# Server side pagination in angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+This project contains generic and reusable pagination component to achieve server side pagination in angular. The pagination component has been created from scratch and does not use any third party pagination library. 
+
+## Stack used
+- Angular
+- Typescript
+- Node.js
+- Bootstrap
 
 ## Development server
 
