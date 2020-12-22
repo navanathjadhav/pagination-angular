@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <!-- Starts upper section [Search box and Records per page] -->
   <div class="d-flex justify-content-between align-items-center mt-4">
     <div class="flex-grow-1 w-100">
       <div class="search">
@@ -14,20 +15,15 @@
                   placeholder="Search students"
                   (keydown)="clearSearchResult()"
                 />
-
                 <span>
                   <i class="bx bx-fw bx-search"></i>
                 </span>
                 <div class="input-group-append">
-                  <button
-                    class="btn btn-primary"
-                    type="submit"
-                  >
-                    Search
-                  </button>
+                  <button class="btn btn-primary" type="submit">Search</button>
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-6">
               <div class="d-flex align-items-center justify-content-end">
                 <div class="form-group">
@@ -55,6 +51,9 @@
       </div>
     </div>
   </div>
+  <!-- End upper section -->
+
+  <!-- Starts table -->
   <div class="row">
     <div class="col-md-12">
       <h3>Students</h3>
@@ -101,4 +100,5 @@
       </div>
     </div>
   </div>
+  <!-- Ends table -->
 </div>

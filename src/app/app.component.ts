@@ -7,12 +7,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+
   constructor(private fb: FormBuilder) {}
+  
+  // Defaults
   form!: FormGroup;
-  title = 'pagination-angular';
   students: any = [];
-  pager: any = {};
-  loading: boolean = false;
   searchTerm: string = '';
   reload: EventEmitter<boolean> = new EventEmitter();
   isLoadingStudents: boolean = false;
@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     this.buildForm();
   }
 
+  // Init form
   buildForm() {
     this.form = this.fb.group({
       term: ['', [Validators.required]],
@@ -29,30 +30,22 @@ export class AppComponent implements OnInit {
     });
   }
 
+  // On form submit => assign search term
   submitForm(): void {
-    console.log('this.form', this.form.value);
     if (this.form.invalid) {
       return;
     }
     this.searchTerm = this.form.value.term;
   }
 
-  applyValidations() {
-    for (const i in this.form.controls) {
-      if (this.form.controls.hasOwnProperty(i)) {
-        this.form.controls[i].markAsDirty();
-        this.form.controls[i].updateValueAndValidity();
-      }
-    }
-  }
-
+  // Clear search results on search box empty
   clearSearchResult() {
-    if (!this.form.controls.term.value && this.searchTerm) {
+    if (this.form.controls.term.value === '' && this.searchTerm) {
       this.searchTerm = '';
-      this.reload.emit(true);
       setTimeout(() => {
+        this.reload.emit(true);
         this.reload.emit(false);
-      }, 1000);
+      }, 100);
     }
   }
 }
