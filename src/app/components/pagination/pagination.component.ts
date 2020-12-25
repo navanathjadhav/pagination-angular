@@ -55,6 +55,16 @@ export class PaginationComponent implements OnInit {
     }
   }
 
+  // Fetch new page data
+  next() {
+    this.getData(this.currentPageNumber + 1)
+  }
+  
+  // Fetch previous page data
+  prev() {
+    this.getData(this.currentPageNumber - 1)
+  }
+
   // Fetch data from API
   getData(pageNo: any) {
     this.loading.emit(true);
