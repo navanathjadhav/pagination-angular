@@ -1,8 +1,5 @@
-<div
-  *ngIf="totalRecordsCount > 0"
-  class="table-footer d-flex justify-content-between align-items-center"
->
-  <div class="records-count d-sm-block d-none text-secondary">
+<div class="d-flex justify-content-between align-items-center">
+  <div class="records-count d-sm-block text-secondary">
     Showing {{ pager.startIndex + 1 }} to {{ pager.endIndex + 1 }} of
     {{ totalRecordsCount }} entries
   </div>
@@ -10,13 +7,9 @@
   <nav class="pages">
     <ul class="pagination">
       <li [ngClass]="{ disabled: currentPageNumber === 1 }" class="page-item">
-        <a
-          href="javascript:;"
-          class="page-link"
-          (click)="prev()"
-          >Previous</a
-        >
+        <a href="javascript:;" class="page-link" (click)="prev()">Previous</a>
       </li>
+
       <li
         [ngClass]="{ 'custom-disabled active': currentPageNumber === page }"
         class="page-item"
@@ -26,16 +19,12 @@
           page
         }}</a>
       </li>
+
       <li
         [ngClass]="{ disabled: currentPageNumber + 1 > totalPages }"
         class="page-item"
       >
-        <a
-          class="page-link"
-          href="javascript:;"
-          (click)="next()"
-          >Next</a
-        >
+        <a class="page-link" href="javascript:;" (click)="next()">Next</a>
       </li>
     </ul>
   </nav>

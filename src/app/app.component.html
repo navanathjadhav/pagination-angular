@@ -87,7 +87,6 @@
             </tbody>
           </table>
           <app-pagination
-            class="table-responsive"
             (responseData)="students = $event"
             (loading)="isLoadingStudents = $event"
             [apiRoute]="'http://localhost:4000/api/students'"

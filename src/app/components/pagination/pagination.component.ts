@@ -68,6 +68,7 @@ export class PaginationComponent implements OnInit {
   // Fetch data from API
   getData(pageNo: any) {
     this.loading.emit(true);
+    this.responseData.emit([]);
     this.currentPageNumber = Number(pageNo);
     let finalPath = `${this.apiRoute}?pageNumber=${this.currentPageNumber}&recordsPerPage=${this.recordsPerPage}`;
 
@@ -100,12 +101,6 @@ export class PaginationComponent implements OnInit {
       pageNo,
       this.recordsPerPage
     );
-  }
-
-  // Set the record count
-  setRecordCount(limit: any) {
-    this.recordsPerPage = limit;
-    this.getData(this.currentPageNumber);
   }
 
   // Watch for changes: [searchTerm & recordsPerPage]

@@ -1,4 +1,10 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import {
+  AfterViewChecked,
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  OnInit,
+} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -6,10 +12,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewChecked {
+  constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef) {}
 
-  constructor(private fb: FormBuilder) {}
-  
   // Defaults
   form!: FormGroup;
   students: any = [];
@@ -18,9 +23,16 @@ export class AppComponent implements OnInit {
   isLoadingStudents: boolean = false;
   recordsPerPage: number = 5;
 
+  // On init
   ngOnInit(): void {
     this.buildForm();
   }
+  
+  // On After view checked, detect changes manually
+  ngAfterViewChecked(): void {
+    this.cdr.detectChanges();
+  }
+
 
   // Init form
   buildForm() {
