@@ -14,9 +14,9 @@ This project contains generic and reusable pagination component to achieve serve
 
 ## Outline
 - Pagination supportive API
-- A reusable pagination component
-- A generic pager service for calculating pager data
-- A parent component containing table for consuming pagination component
+- Reusable pagination component
+- Generic pager service for calculating pager data
+- Parent component containing table for consuming pagination component
 
 ## Share & Care
 
