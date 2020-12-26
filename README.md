@@ -20,7 +20,7 @@ This project contains generic and reusable pagination component to achieve serve
 
 ## Share & Care
 
-If you think this project is helpful share it on [Twitter](https://github.com/navanathjadhav/pagination-angular)
+If you think this project is helpful share it on [Twitter](https://twitter.com/intent/tweet?url=https://github.com/navanathjadhav/pagination-angular)
 
 ## Read More
 View detailed article on Ever Blogs: [Server-side pagination in Angular 11 | Ever Blogs](https://everblogs.com/angular/server-side-pagination-in-angular-11/)
