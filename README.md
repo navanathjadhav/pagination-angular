@@ -8,9 +8,30 @@ This project contains generic and reusable pagination component to achieve serve
 - Node.js
 - Bootstrap
 
+## Demo Output
+
+![Demo](./demo-output.gif)
+
+## Outline
+- Pagination supportive API
+- A reusable pagination component
+- A generic pager service for calculating pager data
+- A parent component containing table for consuming pagination component
+
+## Share & Care
+
+If you think this project is helpful share it on [Twitter](https://github.com/navanathjadhav/pagination-angular)
+
+## Read More
+View detailed article on Ever Blogs: [Server-side pagination in Angular 11 | Ever Blogs](https://everblogs.com/angular/server-side-pagination-in-angular-11/)
+<br>
+Please visit [Ever Blogs](https://everblogs.com/) to read interesting blogs on other Technologies.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Run `npm run server:start` for a mock Node.js server API. It will start on `http://localhost:4000/`.
 
 ## Code scaffolding
 
@@ -28,6 +49,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Contribute
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You are always welcome to help to make this project more knowledgeable and helpful for other developers.
+
+Just submit a PR.
