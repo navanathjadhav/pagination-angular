@@ -8,6 +8,9 @@ This project contains generic and reusable pagination component to achieve serve
 - Node.js
 - Bootstrap
 
+## Give a Star ⭐
+If you liked this project or found it helpful then please give it a star. It will keep motivating me do more work like this! Thanks.
+
 ## Demo Output
 
 ![Demo](./demo-output.gif)
